@@ -1,0 +1,479 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/idangerous.swiper.css">
+
+
+    <style>
+        html,body{background-color: rgb(253, 247, 247);}
+        .h10 {height: 10px;}
+
+        /* 头部导航样式 */
+        .header {/*position: absolute;*/ height: 630px; line-height: 50px; background-color: #f9f9fa; width: 100%;top: 0;}
+        /* .header .left  {position: absolute;left: 0;height: 50px;} */
+        /* .header .left  .logoleft {height: 20px;vertical-align: top; margin-top: 15px;}
+        .header .left  .logo {height: 46px; vertical-align: top; margin-top: 2px; margin-left: -10px;}
+        .header .left  .title {font-size: 20px; color: #fff; margin-left: -10px;padding-right: 10px;} */
+        .header .searchBox {
+            position: absolute; top: 10%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            width: 80%;
+            height: 28px;
+            border: 2px solid rgb(216, 37, 37);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            margin: 0px 10%;}
+        .header .searchBox input {
+            width: 80%;
+            float: left;
+            height: 100%;
+            line-height: 28px \9;
+            padding: 0 8px;}
+        .header .searchBox img {
+            width: 8%;
+            height: 30px;
+            background: url(../image/search.png) left center no-repeat;
+            float: right;
+            margin-right: 10px;}
+        .header .btn  {position: absolute;right: 0;color: #fff;line-height: 40px;margin-top: 5px;margin-right: 10px;background-color: #44AEF4;padding: 0 10px;}
+
+/* 
+        .header .right {position: absolute;right: 0;height: 50px;}
+        .header .right img {height: 20px;padding: 15px;} */
+
+        .loginbg {width: 100%;}
+        
+        /* 主体样式 */
+        /* .content {background-color: rgb(253, 253, 253); margin-top: 10px; margin-left: 10px; margin-right: 10px;height: 40px;line-height: 40px;padding: 0 10px;color: #888;border: 1px solid #DADADA;}
+        .content img {width: 24px;margin-top: 8px;float: right;} */
+        /* 悬浮样式 */
+        /* .itemhover {background-color: #EDEDED;}
+        .headerhover {background-color: rgba(54, 168, 220, 0.6) !important;} */
+        .header .shaixuan {position:absolute;
+            height: 25px; 
+            width: 24%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(245, 241, 241);
+            top:20%;left:38px;}
+        .header .shaixuan .input1 {
+            width: 100%;
+            float: left;
+            height: 100%;
+            line-height: 22px;
+            padding: 0 8px;}
+        .fenlei {position:absolute;
+            height: 25px; 
+            width: 15%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            top:20%;left:134px;}
+        .fenlei .input2 {
+            width: 100%;
+            float: left;
+            height: 100%;
+            line-height: 22px;
+            padding: 0 8px;}
+        .jiage {position:absolute;
+            height: 25px; 
+            width: 15%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            top:20%;left:200px;}
+        .jiage .input3 {
+            width: 100%;
+            float: left;
+            height: 100%;
+            line-height: 22px;
+            padding: 0 8px;}
+        .renqi {position:absolute;
+            height: 25px; 
+            width: 15%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            top:20%;left:268px;}
+        .renqi .input4 {
+            width: 100%;
+            float: left;
+            height: 100%;
+            line-height: 22px;
+            padding: 0 8px;}
+        .快餐便当 {position:absolute;
+            height: 25px; 
+            width: 15%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            top:80px;left:274px;}
+        .特色菜系 {position:absolute;
+            height: 25px; 
+            width: 15%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            top:80px;left:274px;}
+        .异国料理 {position:absolute;
+            height: 25px; 
+            width: 15%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            top:80px;left:274px;}
+        .小吃夜宵 {position:absolute;
+            height: 25px; 
+            width: 15%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            top:80px;left:274px;}
+        .甜品饮品 {position:absolute;
+            height: 25px; 
+            width: 15%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            top:80px;left:274px;}
+                .shaixuan {position:absolute;
+            height: 25px; 
+            width: 20%;
+            border-top-left-radius: 50px;
+            border-top-right-radius: 50px;
+            border-bottom-left-radius: 50px;
+            border-bottom-right-radius: 50px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            top:80px;left:38px;}
+        .shop {position:absolute;
+            height: 150px; 
+            width: 80%;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border: 1px solid rgb(194, 189, 189);/*设置边框*/
+            background-color: rgb(255, 255, 255);
+            top:500px;left:38px;}
+        
+        /* .shaixuan-item {display: block; -webkit-box-flex: 1; width: 100%; line-height: 25px; 
+            font-size: 15px; text-align: center;color: #130101; position: relative;}
+        .shaixuan-item img {width: 1px; position: absolute; bottom: 1px;right: 5px;}
+        .shaixuan-item-hov {color: rgb(22, 10, 10); }
+        .shaixuan-item-active {color: rgb(20, 16, 16); } */
+        /* #navmark {position: absolute; left: 0px; bottom: 0px; -webkit-transition: 300ms; text-align: center;border: 2px solid rgb(216, 37, 37);background-color: rgb(255, 255, 255);height: 3px;} */
+        /* 第三部分 */
+        .section3 .item {background-color: rgb(255, 255, 255);position: relative;border-bottom: 5px solid #D1D1D1;
+            top: 10px;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;}
+        .section3 .item .itemlogo {position: absolute; top: 10px;}
+        .section3 .itemshelf {margin-left: 70px;
+            margin-right: 70px;
+            display: block;/* 不再显示为table-cell */}
+        .section3 .item .userlogo img {width: 40px;padding: 2px; border: 1px solid #e7e7e7;border-radius: 2px;}
+        .section3 .itemshelf .shelfinfo01 {color: #000;
+            font-weight: bold;
+            padding: 4px 0;
+            font-size: 16px;line-height: 18px;margin-top: 10px;}
+        .section3 .itemshelf .ordering{color: #fff;font-size: 20px;font-size: 12px;background-color: #5bb06c;padding: 2px 4px;display: inline-block;}
+        .section3 .itemshelf .shelfinfo03 {
+            color: rgb(102, 62, 62);font-size: 12px;margin-right: 30%;
+            top: 2px;
+            /* border-bottom: 1px dotted #666; */
+            background-color: #ffffff;
+            padding: 2px 0;}
+        .section3 .style2 .itemshelf .shelfinfo03 {color: #999;font-size: 12px;margin-right: 10px;border-bottom: 0;padding: 10px 0;}
+        .section3 .itemshelf .staring {color: rgb(26, 160, 71);font-size: 12px;/*background-color: #fff;*/line-height: 14px;margin-top: 5px;}
+        .section3 .itemshelf .staring img {height: 12px;}
+
+        .section3 .itemshelf .shelfinfo04 {color: #999;font-size: 12px;padding: 10px 0;}
+        .section3 .itemshelf .shelfinfo05 {color: #999;font-size: 12px;padding: 10px 0 0 0;}
+       
+
+        /* 标题栏小图标 */
+        .section3 .itemshelf .shelfinfo01 .pei {color: #fff;font-size: 12px;background-color: #82782f;margin-left: 5px;padding: 1px;border-radius: 3px;}
+        .section3 .itemshelf .shelfinfo01 .ticket {color: #fff;font-size: 12px;background-color: #3585b7;margin-left: 5px;padding: 2px;border-radius: 3px;}
+        .section3 .itemshelf .shelfinfo01 .fu {color: #fff;font-size: 12px;background-color: #e5322d;margin-left: 5px;padding: 2px;border-radius: 3px;}
+        .section3 .itemshelf .shelfinfo01 .compensate {color: #fff;font-size: 12px;background-color: #2768ba;margin-left: 5px;padding: 2px;border-radius: 3px;}
+        .section3 .itemshelf .shelfinfo01 .new {color: #fff;font-size: 12px;background-color: #e5322d;margin-left: 5px;padding: 2px;border-radius: 3px;}
+        .section3 .itemshelf .shelfinfo04 .jian {color: #fff;font-size: 12px;background-color: #cd22e2;padding: 1px;border-radius: 3px;margin-right: 5px;}
+        .section3 .itemshelf .shelfinfo05 .quatity {color: #fff;font-size: 12px;background-color: #dc0414;padding: 1px;border-radius: 3px;margin-right: 5px;}
+
+
+        /* 倒计时 */
+        .section3 .item .box{
+            /* 最外层的盒子 */
+            top: 20px;
+            right: 10px;
+            width:80px;
+            height: 80px;
+            margin: 0 auto;
+            position: absolute;
+            overflow: hidden;
+            border-radius: 50%;      background-color: rgb(255, 255, 255);
+        }
+        .left_box,.right_box{
+            /* 
+              左右两边用于 隐藏 旋转的div的盒子 
+              通过overflow来隐藏内部div旋转出去的部分
+            */
+            position: absolute;
+            top: 0;
+            width:40px;
+            height:80px;
+            overflow: hidden;
+            z-index: 1;
+        }
+        .left_box{
+            left: 0;
+        }
+        .right_box{
+            right: 0;
+        }
+        .left_item,.right_item{
+            /*        这是需要旋转的div(没有被mask遮盖展示出来的部分作为倒计时的线条)       为了方便理解，下面用deeppink和cyan分别设置了左右两边div的颜色      */
+            width: 40px;
+            height: 80px;
+        }
+        .left_item{
+            /*
+            1.设置圆角，圆角大小为高度的一半
+            2.这只旋转的中心店，这是左边圆，中心点设置到右边中心点，右边圆则设置到左边中心点
+            */
+            border-top-left-radius: 100px;
+            border-bottom-left-radius: 100px;
+            -webkit-transform-origin: right center;
+            transform-origin: right center;
+            -webkit-animation: loading_left 100s linear;
+            background-color: rgb(224, 141, 15);
+        }
+        .right_item{
+            border-top-right-radius: 100px;
+            border-bottom-right-radius: 100px;
+            -webkit-transform-origin: left center;
+            transform-origin: left center;
+            -webkit-animation: loading_right 100s linear;
+            background-color: rgb(224, 141, 15);
+        }
+        .mask{
+            /* text-align: center */
+            /* 遮住div多余的部分，呈现出线条的效果 */
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            right: 5px;
+            bottom: 5px;
+            z-index: 2;
+            border-radius: 50%;
+            background-color: #fff;
+        }
+        .mask .text-center2 {
+            position: relative;
+            font-weight: bold;
+            font-size: 20px;
+            top: 30%;
+            left: 18%;
+            text-align: center;
+            color: rgb(128, 7, 7);
+        }
+        @-webkit-keyframes loading_left{
+            0%{
+                -webkit-transform: rotate(0deg);
+            }
+            50%{
+                -webkit-transform: rotate(0deg);
+            }
+            100%{
+                -webkit-transform: rotate(180deg);
+            }
+        }
+        @-webkit-keyframes loading_right{
+            0%{
+              -webkit-transform: rotate(0deg);
+            }
+            50%{
+              -webkit-transform: rotate(180deg);
+            }
+            100%{
+              -webkit-transform: rotate(180deg);
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+    <div class="header" id="topbar">
+        <!-- <div class="left" tapmode onclick="goback()">
+            <img src="../image/abc_ic_ab_back_holo_dark.png" alt="" class="logoleft"><img src="../image/m_drawer_icon_home_selected.png" alt="" class="logo">
+        </div> -->
+        <img src="../image/gaodeditu.png" alt="" class="loginbg" height=110% width=100%>
+        <div class="searchBox">
+            <input type="text" placeholder="按餐厅名搜索" class="emptyinput">
+            <img src="../image/abc_ic_clear_search_api_holo_light.png" alt="" onclick="emptyinput()" tapmode="">
+        </div>
+        <!-- <nav class="shaixuan">
+            <input type="text" placeholder="筛选条件" class="emptyinput">
+            <img src="" alt="" onclick="emptyinput()" tapmode="">
+        </nav> -->
+        <div class="shaixuan">
+            <div class="input1" onclick="openNewFrame('floatlist05')">筛选条件</div>
+        </div>
+        <!-- <nav class="navbar">
+            <a id="navbar-item-all" 
+            class="navbar-item navbar-item-active" 
+            tapmode="navbar-item-hov" 
+            onclick="openNewFrame('floatlist03')">
+            智能排序
+            <img src="../image/pager_tab_menu_indicator.png" alt="">
+            </a>
+        </nav> -->
+        <!-- <div class="btn" tapmode="headerhover" onclick="">确定</div> -->
+    </div>
+    
+    <!-- <div class="content" tapmode="itemhover" onclick="getGeo()">
+        点击定位当前位置
+        <img src="../image/m_switchaddress_icon_locate.png" alt="">
+    </div> -->
+    <!-- <div class="shaixuan">
+        <input type="text" placeholder="筛选条件" class="emptyinput">
+        <img src="" alt="" onclick="emptyinput()" tapmode=""> -->
+        <!-- <div class="shaixuan-item shaixuan-item-active" tapmode="shaixuan-item-hov" onclick="openNewFrame('floatlist03')">筛选条件</a> -->
+    <!-- </div> -->
+    <div class="fenlei">
+        <div class="input2" onclick="openNewFrame('floatlist05')">分类</div>
+    </div>
+    <!-- <div class="fenlei">
+        <input type="text" placeholder="分类" class="emptyinput">
+        <img src="" alt="" onclick="emptyinput()" tapmode="">
+    </div> -->
+    <div class="jiage">
+        <div class="input3" onclick="openNewFrame('floatlist05')">价格</div>
+    </div>
+    <!-- <div class="jiage">
+        <input type="text" placeholder="价格" class="emptyinput">
+        <img src="" alt="" onclick="emptyinput()" tapmode="">
+    </div> -->
+    <div class="renqi">
+        <div class="input4" onclick="openNewFrame('floatlist05')">人气</div>
+    </div>
+    <!-- <div class="renqi">
+        <input type="text" placeholder="人气" class="emptyinput">
+        <img src="" alt="" onclick="emptyinput()" tapmode="">
+    </div> -->
+    <div class="shop">
+        <div class="section3">
+            <div class="item style1" tapmode="itemhover" onclick="openNewWin('shopdetail')">
+                <div class="itemlogo userlogo"><img src="../image/shopcover/lihua.jpeg" alt=""></div>
+                <div class="itemshelf">
+                    <div class="shelfinfo01">招牌里脊肉</div>
+                    <!-- <div class="shelfinfo02 ordering">接受预定中</div> -->
+                    <div class="shelfinfo03">2022-01-01 16:00-17:00</div>
+                    <div class="shelfinfo03">订单号：66666666666666</div>
+                    <div class="shelfinfo03">人数：4人</div>
+                    <div class="shelfinfo04">签到 点餐 付款 完成</div>
+                </div>
+                <div class="box">
+                    <div class="left_box">
+                      <div class="left_item"></div>
+                    </div>
+                    <div class="right_box">
+                      <div class="right_item"></div>
+                    </div>
+                    <div class="mask"><span class="text-center2">6.5折</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+</body>
+<script type="text/javascript" src="https://restapi.amap.com/v3/staticmap?location=116.481485,39.990464&zoom=10&size=750*300&markers=mid,,A:116.481485,39.990464&key=<a71e659c2f599a8a1772647aa2e04e48>"></script>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+function openNewFrame (type) {
+    api.openFrame({
+        name:type,
+        url: './'+type+'.html',
+        rect:{x:0,y:0,w:'auto',h:'auto'},
+        bounces:false,
+        delay:200
+    })
+}
+function goback () {
+    api.closeWin({name:'searchlocation'});
+}
+
+function getGeo () {
+    var baiduLocation = api.require('baiduLocation');
+
+    baiduLocation.startLocation({
+        accuracy: '100m',
+        filter:1,
+        autoStop: true
+    },function(ret, err){
+        var sta = ret.status;
+        var lat = ret.latitude;
+        var lon = ret.longitude;
+        var t = ret.timestamp;
+        if(sta){
+            var str = '经度：'+ lon +'\n';
+            str += '纬度：'+ lat +'\n';
+            
+            alert(str);
+        } else{
+            
+        }
+    });
+}
+var input = {};
+function emptyinput() {
+    if ( input.empty === undefined) {
+        input = document.getElementsByClassName('emptyinput')[0];
+        input.empty = 'false';
+    }
+    input.value = '';
+}
+apiready = function(){
+	$api.fixStatusBar( $api.dom('#topbar') );
+}
+</script>
+</html>

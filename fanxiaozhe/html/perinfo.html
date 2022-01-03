@@ -1,0 +1,187 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/idangerous.swiper.css">
+
+
+    <style>
+        html,body{height:100%;background-color: rgb(236, 233, 233);}
+        .h10 {height: 10px;}
+
+        /* 头部导航样式 */
+        .header {position: relative;height: 50px;line-height: 50px;background-color: #3993cf;}
+        .header .left  {position: absolute;left: 0;height: 50px;}
+        .header .left  .logoleft {height: 20px;vertical-align: top; margin-top: 15px;}
+        .header .left  .logo {height: 46px; vertical-align: top; margin-top: 2px; margin-left: -10px;}
+        .header .left  .title {font-size: 20px; color: #fff; margin-left: -10px;padding-right: 10px;}
+
+
+        .header .right {position: absolute;right: 0;height: 50px;}
+        .header .right img {height: 20px;padding: 15px;}
+
+        .loginbg {
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            background-color: rgb(153, 6, 6);position: relative;height: 120px;}
+        
+        /* 登陆样式 */
+        .loginbox {background-color: #fff;position: relative;height: 60px;}
+        .loginbox .avatar {
+            /* border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px; */
+            position: absolute;left: 20px;top: -20px;border: 1px solid #e0e0e0;padding: 2px;background: #fff;border-radius: 3px;}
+        .loginbox .avatar img {
+            /* border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px; */
+            width: 60px;}
+        .loginbox .shelf {margin-left: 100px;}
+        .loginbox .shelf .shelf01 {padding-top: 5px;
+            font-weight: bold;
+            /* font-family: Georgia, 'Times New Roman', Times, serif; */
+            color: rgb(153, 6, 6);}
+        .loginbox .shelf .shelf02 {margin-top: 5px;color: #757a7c;font-size: 12px;}
+
+        /* 用户item */
+        .useritem {background-color: #fff;margin: 10px;
+            /* border: 1px solid #d2d2d2; */
+        }
+        .useritem  div {height: 50px;line-height: 50px;padding-left: 15px;}
+        .useritem  div:first-child {
+            /* border-bottom: 1px solid #d2d2d2; */
+        }
+        
+
+        /* 悬浮样式 */
+        .itemhover {background-color: #eee;}
+        .headerhover {background-color: #36A8DC;}
+
+        .menu1 {
+            /* padding-left: 15px; */
+            /* border-top-left-radius: 10px;
+            border-top-right-radius: 10px; */
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            /* padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 100px;
+            padding-bottom: 10px; */
+            /* display: block; */
+            position: relative;
+            /* top: 10px; */
+            bottom: 0;
+            width: 100%;
+            height: 70px;
+            color: #474747;
+            padding-top: 10px;
+            border-top: 1px solid rgb(255, 255, 255);
+            background-color: rgb(250, 250, 250);
+        }
+
+        .subMenu1 {
+            width: 33%;
+            float: left;
+            cursor: pointer;
+        }
+        .subMenu2 {
+            width: 50%;
+            float: left;
+            cursor: pointer;
+        }
+
+        .menu_name1 {
+            height: 30px;
+            width: 100%;
+            line-height: 30px;
+            font-size: 12px;
+            color: rgb(153, 6, 6);
+        }
+        .menu_name2{
+            height: 30px;
+            width: 100%;
+            line-height: 30px;
+            font-size: 20px;
+            color: rgb(153, 6, 6);
+        }
+
+        /* img {
+            vertical-align: middle;
+            border: 0;
+        } */
+        /* .active1 {
+            color: #FFA129;
+        } */
+
+        .text-center1 {
+            
+            font-weight: bold;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <!-- <div class="header" id="topbar">
+        <div class="left" tapmode onclick="goback()">
+            <img src="../image/icon_drawer_burger.png" alt="" class="logoleft"><img src="../image/m_drawer_icon_home_selected.png" alt="" class="logo">
+            <span class="title">个人中心</span>
+        </div>
+        <div class="right" tapmode="headerhover" onclick="openNewWin('login_body')"><img src="../image/more_setting.png" alt=""></div>
+    </div> -->
+
+    <div class="content">
+        <!-- <img src="../image/wgq.png" alt="" class="loginbg"> -->
+        <div class="loginbg"></div>
+        <div class="loginbox">
+            <div class="avatar" tapmode="" onclick="openNewWin('login_body')"><img src="../image/user_center_default_avatar.png" alt=""></div>
+            <div class="shelf" tapmode="" onclick="openNewWin('login_body')">
+                <div class="shelf01">登录/注册</div>
+                <div class="shelf02">您还未登录哦</div>
+            </div>
+        </div>
+
+        <div class="useritem">
+            <div class="shelf01" tapmode="itemhover" onclick="openNewWin('login_body')">反馈意见</div>
+            <div class="shelf02" tapmode="itemhover" onclick="openNewWin('login_body')">客服中心</div>
+            <div class="shelf03" tapmode="itemhover" onclick="openNewWin('login_body')">吃货宝典</div>
+            <div class="shelf04" tapmode="itemhover" onclick="openNewWin('login_body')">用户协议</div>
+            <div class="shelf05" tapmode="itemhover" onclick="openNewWin('login_body')">关于饭小折</div>
+            <div class="shelf06" tapmode="itemhover" onclick="openNewWin('login_body')">设置</div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+
+function goback () {
+    api.closeWin({name:'login'});
+}
+
+function openNewWin (type) {
+    api.openWin ({
+        name: type,
+        url: './'+type+'.html',
+        rect:{
+            x:0,
+            y:0,
+            w:'auto',
+            h:'auto'
+        },
+        bounces: false,
+        delay:200
+    });
+}
+
+apiready = function(){
+	$api.fixStatusBar( $api.dom('#topbar') );
+}
+</script>
+</html>

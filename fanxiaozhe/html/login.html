@@ -1,0 +1,281 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+    <title>Hello APP</title>
+    <link rel="stylesheet" type="text/css" href="../css/api.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/idangerous.swiper.css">
+
+
+    <style>
+        html,body{height:100%;background-color: rgb(236, 233, 233);}
+        .h10 {height: 10px;}
+
+        /* 头部导航样式 */
+        .header {position: relative;height: 50px;line-height: 50px;background-color: #3993cf;}
+        .header .left  {position: absolute;left: 0;height: 50px;}
+        .header .left  .logoleft {height: 20px;vertical-align: top; margin-top: 15px;}
+        .header .left  .logo {height: 46px; vertical-align: top; margin-top: 2px; margin-left: -10px;}
+        .header .left  .title {font-size: 20px; color: #fff; margin-left: -10px;padding-right: 10px;}
+
+
+        .header .right {position: absolute;right: 0;height: 50px;}
+        .header .right img {height: 20px;padding: 15px;}
+
+        .loginbg {
+            border-bottom-left-radius: 30px;
+            border-bottom-right-radius: 30px;
+            background-color: rgb(153, 6, 6);position: relative;height: 120px;}
+        
+        /* 登陆样式 */
+        .loginbox {background-color: #fff;position: relative;height: 60px;}
+        .loginbox .avatar {
+            /* border-top-left-radius: 100px;
+            border-top-right-radius: 100px;
+            border-bottom-left-radius: 100px;
+            border-bottom-right-radius: 100px; */
+            position: absolute;left: 20px;top: -20px;border: 1px solid #e0e0e0;padding: 2px;background: #fff;border-radius: 3px;}
+        .loginbox .avatar img {
+            /* border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px; */
+            width: 60px;}
+        .loginbox .shelf {margin-left: 100px;}
+        .loginbox .shelf .shelf01 {padding-top: 5px;
+            font-weight: bold;
+            /* font-family: Georgia, 'Times New Roman', Times, serif; */
+            color: rgb(153, 6, 6);}
+        .loginbox .shelf .shelf02 {margin-top: 5px;color: #757a7c;font-size: 12px;}
+
+        /* 用户item */
+        .useritem {
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            position: relative;
+            top:20px;width: 100%;background-color: #fff;
+            /* margin: 10px; */
+            color: #474747;
+            height: 50px;
+            /* padding-top: 10px; */
+            border-top: 1px solid #eee;
+            background-color: rgb(255, 255, 255);
+            /* border: 1px solid #d2d2d2;*/
+        } 
+        .useritem  div {height: 50px;line-height: 50px;
+            /* padding-left: 15px; */
+        }
+        /* .useritem  div:first-child {border-bottom: 1px solid #462424;} */
+        
+
+        /* 悬浮样式 */
+        .itemhover {background-color: #eee;}
+        .headerhover {background-color: #36A8DC;}
+
+        .menu1 {
+            /* border-top-left-radius: 10px;
+            border-top-right-radius: 10px; */
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            /* padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 100px;
+            padding-bottom: 10px; */
+            /* display: block; */
+            position: relative;
+            /* top: 10px; */
+            bottom: 0;
+            width: 100%;
+            height: 70px;
+            color: #474747;
+            padding-top: 10px;
+            border-top: 1px solid rgb(255, 255, 255);
+            background-color: rgb(250, 250, 250);
+        }
+
+        .subMenu1 {
+            width: 33%;
+            float: left;
+            cursor: pointer;
+        }
+        .subMenu2 {
+            width: 50%;
+            float: left;
+            cursor: pointer;
+        }
+
+        .menu_name1 {
+            height: 30px;
+            width: 100%;
+            line-height: 30px;
+            font-size: 12px;
+            color: rgb(153, 6, 6);
+        }
+        .menu_name2{
+            height: 30px;
+            width: 100%;
+            line-height: 30px;
+            font-size: 20px;
+            color: rgb(153, 6, 6);
+        }
+
+        /* img {
+            vertical-align: middle;
+            border: 0;
+        } */
+        /* .active1 {
+            color: #FFA129;
+        } */
+
+        .text-center1 {
+            
+            font-weight: bold;
+            text-align: center;
+            
+        }
+
+
+         /* 第三部分 */
+        .section3{
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            position: absolute;
+            top:45%;width: 100%;background-color: #fff;
+            /* margin: 10px; */
+            color: #474747;
+            height: 50px;
+            /* padding-top: 10px; */
+            border-top: 1px solid #eee;
+            background-color: rgb(255, 255, 255);
+            /* border: 1px solid #d2d2d2;*/
+        }
+        .section3 .item {background-color: rgb(255, 255, 255);position: relative;border-bottom: 5px solid #D1D1D1;
+        border-top-left-radius: 10px;
+         border-top-right-radius: 10px;
+         border-bottom-left-radius: 10px;
+         border-bottom-right-radius: 10px;}
+        .section3 .item .dongtai {color: rgb(160, 4, 4);
+            font-weight: bold;
+            margin-left: 10px;
+            font-size: 16px;line-height: 18px;margin-top: 10px;
+            padding: 4px 0;
+        }
+        .section3 .item .itemlogo {position: absolute; top: 30%;}
+        .section3 .itemshelf {margin-left: 70px;display: block;/* 不再显示为table-cell */}
+        .section3 .item .userlogo img {width: 40px;padding: 2px; border: 1px solid #e7e7e7;border-radius: 2px;}
+        .section3 .itemshelf .shelfinfo01 {color: #000;font-size: 16px;line-height: 18px;margin-top: 10px;}
+        .section3 .itemshelf .ordering{color: #fff;font-size: 12px;background-color: #5bb06c;padding: 2px 4px;display: inline-block;}
+        .section3 .itemshelf .shelfinfo03 {color: rgb(102, 62, 62);font-size: 12px;margin-right: 10px;border-bottom: 1px dotted #666;padding: 10px 0;}
+        .section3 .style2 .itemshelf .shelfinfo03 {color: #999;font-size: 12px;margin-right: 10px;border-bottom: 0;padding: 10px 0;}
+        .section3 .itemshelf .staring {color: rgb(26, 160, 71);font-size: 12px;/*background-color: #fff;*/line-height: 14px;margin-top: 5px;}
+        .section3 .itemshelf .staring img {height: 12px;}
+
+        .section3 .itemshelf .shelfinfo04 {color: #999;font-size: 12px;padding: 10px 0;}
+        .section3 .itemshelf .shelfinfo05 {color: #999;font-size: 12px;padding: 10px 0 0 0;}
+       
+
+        /* 标题栏小图标 */
+        .section3 .itemshelf .shelfinfo01 .pei {color: #fff;font-size: 12px;background-color: #82782f;margin-left: 5px;padding: 1px;border-radius: 3px;}
+        .section3 .itemshelf .shelfinfo01 .ticket {color: #fff;font-size: 12px;background-color: #3585b7;margin-left: 5px;padding: 2px;border-radius: 3px;}
+        .section3 .itemshelf .shelfinfo01 .fu {color: #fff;font-size: 12px;background-color: #e5322d;margin-left: 5px;padding: 2px;border-radius: 3px;}
+        .section3 .itemshelf .shelfinfo01 .compensate {color: #fff;font-size: 12px;background-color: #2768ba;margin-left: 5px;padding: 2px;border-radius: 3px;}
+        .section3 .itemshelf .shelfinfo01 .new {color: #fff;font-size: 12px;background-color: #e5322d;margin-left: 5px;padding: 2px;border-radius: 3px;}
+        .section3 .itemshelf .shelfinfo04 .jian {color: #fff;font-size: 12px;background-color: #cd22e2;padding: 1px;border-radius: 3px;margin-left: 5px;}
+        .section3 .itemshelf .shelfinfo05 .quatity {color: #fff;font-size: 12px;background-color: #dc0414;padding: 1px;border-radius: 3px;margin-left: 5px;}
+    </style>
+</head>
+<body>
+    <!-- <div class="header" id="topbar">
+        <div class="left" tapmode onclick="goback()">
+            <img src="../image/icon_drawer_burger.png" alt="" class="logoleft"><img src="../image/m_drawer_icon_home_selected.png" alt="" class="logo">
+            <span class="title">个人中心</span>
+        </div>
+        <div class="right" tapmode="headerhover" onclick="openNewWin('login_body')"><img src="../image/more_setting.png" alt=""></div>
+    </div> -->
+
+    <div class="content">
+        <!-- <img src="../image/wgq.png" alt="" class="loginbg"> -->
+        <div class="loginbg"></div>
+        <div class="loginbox">
+            <div class="avatar" tapmode="" onclick="openNewWin('perinfo')"><img src="../image/user_center_default_avatar.png" alt=""></div>
+            <div class="shelf" tapmode="" onclick="openNewWin('perinfo')">
+                <div class="shelf01">饭小折</div>
+                <div class="shelf02">把简介写在祖国大地上</div>
+            </div>
+        </div>
+        <div id="menu1" class="menu1">
+            <div id="one" class="subMenu1 text-center1" data-src="perinfo.html">
+                <!-- <img class="menu_img" data-imgname="my"/> -->
+                <div class="menu_name2">66</div>
+                <div class="menu_name1">关注</div>
+            </div>
+            <div id="two" class="subMenu1 text-center1" data-src="perinfo.html">
+                <!-- <img class="menu_img" data-imgname="QQ"/> -->
+                <div class="menu_name2">66</div>
+                <div class="menu_name1">粉丝</div>
+            </div>
+            <div id="three" class="subMenu1 text-center1" data-src="perinfo.html">
+                <!-- <img class="menu_img" data-imgname="QQ"/> -->
+                <div class="menu_name2">66</div>
+                <div class="menu_name1">收藏</div>
+            </div>
+        </div>
+        <div class="useritem">
+            <div id="one" class="subMenu2 text-center1" data-src="slide_body.html">
+                <!-- <img class="menu_img" data-imgname="my"/> -->
+                <div class="menu_name1">折扣用餐15次</div>
+            </div>
+            <div id="two" class="subMenu2 text-center1" data-src="searchlocation.html">
+                <!-- <img class="menu_img" data-imgname="QQ"/> -->
+                <div class="menu_name1">累计省钱167.50元</div>
+            </div>
+        </div>
+    </div>
+    <div class="section3">
+        <div class="item style1" tapmode="itemhover" onclick="openNewWin('shopdetail')">
+            <div class="dongtai">饭友动态</div>
+            <div class="itemlogo userlogo"><img src="../image/shopcover/lihua.jpeg" alt=""></div>
+            <div class="itemshelf">
+                <div class="shelfinfo01">【连锁】饭小折01</div>
+                <!-- <div class="shelfinfo02 ordering">接受预定中</div> -->
+                <div class="shelfinfo03">我可以我可以我可以</div>
+                <div class="shelfinfo04">省16.3元</div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script type="text/javascript">
+
+function goback () {
+    api.closeWin({name:'login'});
+}
+
+function openNewWin (type) {
+    api.openWin ({
+        name: type,
+        url: './'+type+'.html',
+        rect:{
+            x:0,
+            y:0,
+            w:'auto',
+            h:'auto'
+        },
+        bounces: false,
+        delay:200
+    });
+}
+
+apiready = function(){
+	$api.fixStatusBar( $api.dom('#topbar') );
+}
+</script>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+		<title>HTML</title>
+		
+		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+		<link rel="shortcut icon" href="/favicon.ico">
+		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+		<link rel="stylesheet" type="text/css" href="../css/api.css" />
+	  
+		  <style>
+			  html {width: 100%;height: 100%;background:transparent;}
+			  body {background: rgba(5, 5, 5, 0);width: 100%;height: 100%;overflow: hidden;}
+	  
+			  .floatbox {
+				  border-top-left-radius: 10px;
+				  border-top-right-radius: 10px;
+				  border-bottom-left-radius: 10px;
+				  border-bottom-right-radius: 10px;
+				  position: relative; background: #fff; top: 25%; left: 60%; border: 1px solid #42414167; width: 21%;}
+			  .floatheader {height: 40px; line-height: 40px; font-size: 14px; color: #999; text-align: left; margin-left: 20px;}
+			  .floatbody {border-bottom: 1px solid #D0D2D6;}
+			  .floatbodybtn {width: 20px;height: 20px;background: #0fc;}
+			  .floatfooter {height: 10px; line-height: 10px; font-size: 1px;}
+	  
+			  /* 水平等宽样式 */
+			  .floatbox .item {height: 35px;position: relative;font-size: 16px;padding-left: 5px;color: #999;border-bottom: 1px solid #0f0c0c;}
+			  .floatbox .item:last-child {border-bottom: 0;}
+			  .floatbox .checkmark {width: 1px; float: right; margin-top: 1px; margin-right: 1px;}
+			  
+			  .floatbox .col1 {background-color: #0fc;color: rgb(15, 13, 13); margin-top: 10px; font-size: 14px; padding: 2px; border-radius: 3px;}
+			  .floatbox .col2  {position: absolute;height: 60px;margin-top: 10px; margin-left: 5px;}
+			  .floatbox .col2 .title {color: #666;font-size: 14px;}
+			  .floatbox .col2 .subtitle {color: #999; font-size: 10px; margin-top: 0px;}
+			  .floatbox .lh50 {height: 50px;line-height: 50px;vertical-align: top;}
+			  .floatbox .lh50 .bg {background-color: #3893CF;height: 20px; width: 20px; margin-top: 15px;border-radius: 3px;}
+			  .floatbox .lh50 .bg img {width: 14px;vertical-align: top;margin: 3px;}
+			  .floatbox .moneyico {background-color: #FF6000;}
+			  .floatbox .suanicoico {background-color: #FA6B13;}
+			  .floatbox .drinkico {background-color: #3870BE;}
+	  
+			  .floatbox .splider {height: 20px;line-height: 20px;font-size: 10px;color: #D8584A;background-color: #020101;padding-left: 10px;}
+			  /* 悬浮样式 */
+			  .btnhover {background-color: #3993CF;color: #fff;}
+	  
+		  </style>
+	  </head>
+
+<body>
+	<div id="topbar"></div>
+	<div class="floatbox">
+		<!-- <div class="item lh50" tapmode="btnhover" onclick="">
+			<span class="bg"><img src="../image/icon_event_all.png" alt=""></span>
+			全部口味
+			<img src="../image/icon_check.png" alt="" class="checkmark">
+		</div> -->
+
+		<!-- <div class="splider">优惠活动</div> -->
+		<div class="item" tapmode="btnhover" onclick="">
+			<!-- <span class="col1 moneyico">￥</span> -->
+			<span class="col2">
+				<div class="title">全 部</div>
+				<!-- <div class="subtitle"></div> -->
+			</span>
+		</div>
+		<div class="item" tapmode="btnhover" onclick="">
+			<!-- <span class="col1 suanicoico">酸</span> -->
+			<span class="col2">
+				<div class="title">川湘菜</div>
+				<!-- <span class="subtitle">在线支付下单即减钱还赠君乐宝，饿了么全程养护您的胃</span> -->
+			</span>
+		</div>
+		<div class="item" tapmode="btnhover" onclick="">
+			<!-- <span class="col1 drinkico">饮</span> -->
+			<span class="col2">
+				<div class="title">江浙菜</div>
+				<!-- <span class="subtitle">点套餐，赠软饮，时尚又健康</span> -->
+			</span>
+		</div>
+		<div class="item" tapmode="btnhover" onclick="">
+			<!-- <span class="col1 drinkico">饮</span> -->
+			<span class="col2">
+				<div class="title">粤菜</div>
+				<!-- <span class="subtitle">点套餐，赠软饮，时尚又健康</span> -->
+			</span>
+		</div>
+		<div class="item" tapmode="btnhover" onclick="">
+			<!-- <span class="col1 drinkico">饮</span> -->
+			<span class="col2">
+				<div class="title">东北菜</div>
+				<!-- <span class="subtitle">点套餐，赠软饮，时尚又健康</span> -->
+			</span>
+		</div>
+		<div class="item" tapmode="btnhover" onclick="">
+			<!-- <span class="col1 drinkico">饮</span> -->
+			<span class="col2">
+				<div class="title">西北菜</div>
+				<!-- <span class="subtitle">点套餐，赠软饮，时尚又健康</span> -->
+			</span>
+		</div>
+		<div class="item" tapmode="btnhover" onclick="">
+			<!-- <span class="col1 drinkico">饮</span> -->
+			<span class="col2">
+				<div class="title">云南菜</div>
+				<!-- <span class="subtitle">点套餐，赠软饮，时尚又健康</span> -->
+			</span>
+		</div>
+	</div>
+	
+	
+</body>
+<script type="text/javascript" src="../script/api.js"></script>
+<script>
+	function emptyopt () {
+	}
+
+	function goback()
+	{
+		api.closeFrame({name: 'floatlist06'});
+	}
+
+	function match(src, target)
+    {
+        var mark = false;
+        if(src === target){
+            mark = true;
+            return mark;
+        }else{
+            do{
+                src = src.parentNode;
+                if(src === target){
+                    mark = true;
+                    return mark;
+                }
+            }while(src !== document.body && src !== document.documentElement);
+
+            return mark;
+        }
+    }
+    apiready = function(){
+    	var header = $api.byId('topbar');
+    	$api.fixIos7Bar(header); 
+
+        var body = $api.dom('body');
+        $api.addEvt(body,'touchend',function(e){
+
+            var main = $api.dom('.floatbox');
+            
+            if(!match(e.target, main))
+            {
+                api.closeFrame({name:'floatlist06'});
+            }
+            
+
+        });
+
+    }
+		function emptyopt () {
+	}
+
+	function goback()
+	{
+		api.closeFrame({name: 'floatlist06'});
+	}
+	function openNewWin (type) {
+        api.openWin ({
+            name: type,
+            url: './'+type+'.html',
+            rect:{
+                x:0,
+                y:0,
+                w:'auto',
+                h:'auto'
+            },
+            bounces: false,
+            delay:200
+        });
+    }
+
+	function match(src, target)
+    {
+        var mark = false;
+        if(src === target){
+            mark = true;
+            return mark;
+        }else{
+            do{
+                src = src.parentNode;
+                if(src === target){
+                    mark = true;
+                    return mark;
+                }
+            }while(src !== document.body && src !== document.documentElement);
+
+            return mark;
+        }
+    }
+    apiready = function(){
+    	var header = $api.byId('topbar');
+    	$api.fixIos7Bar(header); 
+
+        var body = $api.dom('body');
+        $api.addEvt(body,'touchend',function(e){
+
+            var main = $api.dom('.floatbox');
+            
+            if(!match(e.target, main))
+            {
+                api.closeFrame({name:'floatlist06'});
+            }
+            
+
+        });
+
+    }
+
+
+</script>
+</html>
